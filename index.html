@@ -2,21 +2,49 @@
   <title>Potato The Vote</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/bootstrap@3.3.6(css/bootstrap.min.css+css/bootstrap-theme.min.css)">
   <style>
-  section {
-    background: #fff;
-  }
-  .asdf {
-    padding: 25px;
-  }
+   section {
+     background: #fff;
+   }
+   .potatoes {
+     text-shadow: 1px 0px 2px rgba(255, 255, 255, 1);
+     min-height: 450px;
+     background: url("./images/potatoes.jpg");
+     position: relative;
+     background-size: cover;
+   }
+   .potatoes {
+     background-attachment: fixed;
+     background-position: 50% 0;
+     background-repeat: no-repeat;
+     height: 450px;
+     position: relative;
+     overflow-x: hidden;
+   }
+   .potatoes h1 {
+     bottom: 50%;
+     color: white;
+     display: block;
+     left: 50%;
+     margin-left: -188px;
+     margin-bottom: -75px;
+     font-size: 50px;
+     padding: 10px;
+     position: absolute;
+     text-shadow: 0 2px 0 black, 0 0 10px black;
+     width: 1280px;
+   }
+   .asdf {
+     padding: 25px;
+   }
   </style>
 </head>
 <body>
 
-  <div class="parallax-window" data-parallax="scroll" data-position="top" data-bleed="10" data-image-src="./images/potatoes.jpg" data-natural-width="1400" data-natural-height="900" style="height: 285px;">
-
+  <div class="potatoes" data-stellar-background-ratio="0.5">
+    <h1>Potato The Vote</h1>
   </div>
   <section>
-   <h1>adsasdfadfafdssafd</h1>
+
   </section>
   <section class="asdf">
   </section>
@@ -25,8 +53,13 @@
   <section class="asdf">
   </section>
 
-  <script src="https://cdn.jsdelivr.net/g/jquery@2.2.0,bootstrap@3.3.6"></script>
-  <script src="./js/parallax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/g/jquery@2.2.0,bootstrap@3.3.6,jquery.stellar@0.6.2"></script>
   <script>
+   $(function(){
+     $.stellar({
+       horizontalScrolling: false,
+       verticalOffset: 40
+     });
+   });
   </script>
 </body>
